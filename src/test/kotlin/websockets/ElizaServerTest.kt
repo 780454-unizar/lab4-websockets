@@ -73,6 +73,7 @@ class ElizaOnOpenMessageHandlerToComplete(private val list: MutableList<String>,
     fun onMessage(message: String, session: Session)  {
         list.add(message)
         latch.countDown()
+        //COMPLETE ME
         if (latch.count == 1L) {
             session.basicRemote.sendText("okey")
         }
