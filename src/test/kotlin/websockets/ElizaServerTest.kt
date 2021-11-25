@@ -75,7 +75,7 @@ class ElizaOnOpenMessageHandlerToComplete(private val list: MutableList<String>,
         latch.countDown()
         //COMPLETE ME
         if (latch.count == 1L) {
-            session.basicRemote.sendText("okey")
+            session.basicRemote.sendText("always")
         }
     }
 }
