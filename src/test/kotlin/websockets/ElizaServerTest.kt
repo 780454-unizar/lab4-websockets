@@ -46,12 +46,12 @@ class ElizaServerTest {
         container.connectToServer(client, URI("ws://localhost:$port/eliza"))
         latch.await()
         //COMPLETE ME
-        assertEquals(4, list.size)
         val answers = listOf("Tell me more about such feelings.",
                 "Do you often feel happy?",
                 "Do you enjoy feeling happy?",
                 "Why do you feel that way?")
         
+        assertEquals(4, list.size)
         assert(list[3] in answers)
     }
 
@@ -75,7 +75,7 @@ class ElizaOnOpenMessageHandlerToComplete(private val list: MutableList<String>,
         latch.countDown()
         //COMPLETE ME
         if (latch.count == 1L) {
-            session.basicRemote.sendText("always")
+            session.basicRemote.sendText("I feel happy")
         }
     }
 }
