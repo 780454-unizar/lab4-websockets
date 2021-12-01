@@ -48,7 +48,7 @@ class ElizaServerTest {
         val answers = listOf("Tell me more about such feelings.", "Do you often feel happy?",
                             "Do you enjoy feeling happy?", "Why do you feel that way?")
         assertEquals(4, list.size)
-        assertEquals(list[3] in answers)
+        assert(list[3] in answers)
     }
 
 }
